@@ -1,0 +1,122 @@
+/* Basic styling for the birthday website */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #ffe0ec 0%, #c2e9fb 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 40px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  color: #e75480;
+  margin-bottom: 32px;
+}
+button {
+  background: #e75480;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #c0395b;
+}
+.cake {
+  margin: 32px auto 16px auto;
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+.cake-body {
+  width: 120px;
+  height: 60px;
+  background: #f7b267;
+  border-radius: 0 0 60px 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.candles {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+}
+.candle {
+  width: 10px;
+  height: 30px;
+  background: #fff;
+  border-radius: 4px;
+  margin: 0 8px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.candle::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 12px;
+  background: #ffe066;
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  left: 1px;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.candle.blown::before {
+  opacity: 0;
+}
+#blowBtn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+  align-items: center;
+}
+.card {
+  background: #e0e0e0; /* darker gray */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 24px;
+  align-items: center;
+  text-align: center;
+}
+.card-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin: 12px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
